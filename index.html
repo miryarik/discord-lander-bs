@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAASFBMVEVHcExYZPFXZPJXZPFXZPFXZPFXZPFXZPFYZPJYZfJYZPJXZfFWY/JhbfNsd/OSmvbS1fv////x8/6pr/hQXvLl5/2Bi/XAxfpYg8U1AAAADHRSTlMADzmFwOT8YtP/sloPkm6kAAABAklEQVR4AYWTBbLFIAxFcXs4lf3vFEg1X2+9JzITIZco40IqJQVnlGBRbewtoxFmziI59rCPRGhIfn5hiLKDYSkJkemZz98689IB9YlCjPMlxnBgr4ejgTebcqltqJacLFBDCQPHJZWX0gIOjHB4Lusbrgu4ciKQI3IVRALMGGaAkqgZNdQRK4U8foc0MtQw46oDbmC9pBkQomwHlBPOlOsW9lL2sK1XUknETNnKpNOl5slKm1AQfsFaxw2eF+RQBB9HwLq3PedxG3CPMyc7yufDqF6b5Q2+jfoFf5SPaH/WPXhQuCqvn5bNVqEXR1GzkST7e0wwxeyX0fSO/T/Uf65DBzQNHUMopTvLAAAAAElFTkSuQmCC" type="image/x-icon">
+    <title>Discord</title>
+    
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    
+    <!-- fa icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+    <!-- custom styles and script -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./scripts/script.js"></script>
+    </style>
+  </head>
+  <body>
+        <nav class="navbar sticky-top p-0 m-0 navbar-expand-lg mt-4 mx-0" id="mainNavbar">
+            <div class="container-fluid flex-nowrap justify-content-between px-2">
+                
+                <button class="navbar-toggler order-1 order-md-2 order-lg-1 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a class="navbar-brand order-0 me-auto" href="#">
+                    <img src="./assets/logo.svg" id="logo" class="img-fluid" alt="logo">
+                </a>
+                
+                <div class="offcanvas offcanvas-end bg-black text-white" tabindex="-1" id="navbarOffcanvas" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                    <div class="offcanvas-body justify-content-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link px-2" href="#">Download</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-2" href="#">Nitro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-2" href="#">Discover</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link px-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Safety
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link px-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Quests
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Support
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Blog
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Developers
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-2" href="#">Careers</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary px-3 mx-3 mx-md-4 order-2 order-md-1 order-lg-3 d-none d-md-block" id="login-btn">Log in</button>
+            </div>
+        </nav>
+
+        <div class="main">
+            <div class="row w-100 justify-content-center">
+                <div class="col-md-4 col-sm-12 p-0 mt-5 align-content-center">
+                    <p class="display-4" id="hero-text">GROUP CHAT THAT'S ALL FUN & GAMES</p>
+                    <p class="lead">Discord is great for playing games and chilling with friends, or even building a worldwide community.<br> Customize your own space to talk, play, and hang out.</p>
+                </div>
+                <div class="col-md-7 col-sm-12 mt-5 p-0">
+                    <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6757e1e6a347d3d02d3580bb_CHARACTERS%20FULL.webp" id="hero" alt="herp" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row mt-5 gy-4">
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+                    <button class="btn btn-light px-4 py-3 rounded-4 btn-lg">Download for PC<i class="fa-solid fa-download ms-3"></i></button>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
+                    <button class="btn btn-light px-4 py-3 rounded-4 btn-lg" id="open-btn"><i class="fa-solid fa-display me-3"></i>Open in browser</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container p-lg-5 p-3 w-100">
+            <div class="row justify-content-stretch my-auto mx-auto" id="card">
+                <div class="col-sm-12 col-lg-7 p-0 d-flex align-items-center order-1 order-lg-0" id="card-banner">
+                    <video src="./assets/./card-videos/1.mp4" class="w-100 object-fit-contain" autoplay loop playsinline muted></video>
+                </div>
+                <div class="col-sm-12 col-lg-5 d-flex flex-column justify-content-center" id="card-text">
+                    <p class="display-4">MAKE YOUR GROUP CHATS MORE FUN</p>
+                    <p class="lead">Use custom emoji, stickers, soundboard effects and more to add your personality to your voice, video, or text chat. Set your avatar and a custom status, and write your own profile to show up in chat your way.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container p-lg-5 p-3 w-100">
+            <div class="row justify-content-stretch my-auto mx-auto" id="card">
+                <div class="col-sm-12 col-lg-7 p-0 d-flex align-items-center order-1 order-lg-2" id="card-banner">
+                    <video src="./assets/card-videos/2.mp4" class="w-100 object-fit-contain" autoplay loop playsinline muted></video>
+                </div>
+                <div class="col-sm-12 col-lg-5 d-flex flex-column justify-content-center" id="card-text">
+                    <p class="display-4">STREAM LIKE YOU'RE IN THE SAME ROOM</p>
+                    <p class="lead">High quality and low latency streaming makes it feel like you're hanging out on the couch with friends while playing a game, watching shows, looking at photos, or idk doing homework or something.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container p-lg-5 p-3 w-100">
+            <div class="row justify-content-stretch my-auto mx-auto" id="card">
+                <div class="col-sm-12 col-lg-7 p-0 d-flex align-items-center order-1 order-lg-0" id="card-banner">
+                    <video src="./assets/card-videos/3.mp4" class="w-100 object-fit-contain" autoplay loop playsinline muted></video>
+                </div>
+                <div class="col-sm-12 col-lg-5 d-flex flex-column justify-content-center" id="card-text">
+                    <p class="display-4">HOP IN WHEN YOU'RE FREE, NO NEED TO CALL</p>
+                    <p class="lead">Easily hop in and out of voice or text chats without having to call or invite anyone, so your party chat lasts before, during, and after your game session.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="marquee-wrapper py-2 d-flex align-content-center text-white overflow-hidden">
+            <div class="marquee d-flex">
+                <div class="marquee-content d-flex align-items-center gap-5">
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>talk</span>
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>play</span>
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>chat</span>
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>hang out</span>
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>talk</span>
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>play</span>
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>chat</span>
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>hang out</span>
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>talk</span>
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>play</span>
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>chat</span>
+                    <img src="./assets/Discord-Symbol-White.svg" width="40" alt="Logo">
+                    <span>hang out</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container p-lg-5 p-3 w-100">
+            <div class="row justify-content-stretch my-auto mx-auto" id="card">
+                <div class="col-sm-12 col-lg-7 p-0 d-flex align-items-center order-1 order-lg-2" id="card-banner">
+                    <video src="./assets/card-videos/4.mp4" class="w-100 object-fit-contain" autoplay loop playsinline muted></video>
+                </div>
+                <div class="col-sm-12 col-lg-5 d-flex flex-column justify-content-center" id="card-text">
+                    <p class="display-4">SEE WHO'S AROUND TO CHILL</p>
+                    <p class="lead">See who's around, playing games, or just hanging out. For supported games, you can see what modes or characters your friends are playing and directly join up.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container p-lg-5 p-3 w-100">
+            <div class="row justify-content-stretch my-auto mx-auto" id="card">
+                <div class="col-sm-12 col-lg-7 p-0 d-flex align-items-center order-1 order-lg-0" id="card-banner">
+                    <video src="./assets/card-videos/5.mp4" class="w-100 object-fit-contain" autoplay loop playsinline muted></video>
+                </div>
+                <div class="col-sm-12 col-lg-5 d-flex flex-column justify-content-center" id="card-text">
+                    <p class="display-4">ALWAYS HAVE SOMETHING TO DO TOGETHER</p>
+                    <p class="lead">Watch videos, play built-in games, listen to music, or just scroll together and spam memes. Seamlessly text, call, video chat, and play games, all in one group chat.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container p-lg-5 p-3 w-100">
+            <div class="row justify-content-stretch my-auto mx-auto" id="card">
+                <div class="col-sm-12 col-lg-7 p-0 d-flex align-items-center order-1 order-lg-2" id="card-banner">
+                    <video src="./assets/card-videos/6.mp4" class="w-100 object-fit-contain" autoplay loop playsinline muted></video>
+                </div>
+                <div class="col-sm-12 col-lg-5 d-flex flex-column justify-content-center" id="card-text">
+                    <p class="display-4">WHEREVER YOU GAME, HANG OUT HERE</p>
+                    <p class="lead">On your PC, phone, or console, you can still hang out on Discord. Easily switch between devices and use tools to manage multiple group chats with friends.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex flex-column">
+            <div class="display-4 mt-5 text-center">
+                YOU CAN'T SCROLL ANYMORE.<br>BETTER GO CHAT.
+            </div>
+            <button class="btn btn-light px-4 py-3 mx-auto my-5 rounded-4 btn-lg">Download for PC<i class="fa-solid fa-download ms-3"></i></button>
+        </div>
+
+        <div class="container position-relative">
+            <img src="./assets/footer-banner.webp" id="footer-banner" alt="banner-8" class="img-fluid w-100">
+            
+            <img src="./assets/wumpus-standing.webp"
+                alt="wumpus-standing"
+                id="wumpus-standing"
+                class="position-absolute start-50 translate-middle-x img-fluid"
+            >
+            
+            <img src="./assets/wumpus-hat.webp"
+                alt="wumpus-hat"
+                id="wumpus-hat"
+                class="position-absolute start-50 translate-middle-x img-fluid"
+            >
+        </div>
+
+        <footer class="p-5 position-relative">
+
+
+            <div class="container-fluid my-5 p-5 px-0 mx-md-0">
+                <div class="row px-md-3 justify-content-between">
+                    <div class="col-md-4">
+                        <img
+                            src="./assets/Discord-Symbol-White.svg"
+                            id="symbol"
+                        />
+                        <p class="mt-5 fs-5">Language</p>
+
+                        <div class="dropdown">
+                            <button
+                                class="btn d-flex align-items-center justify-content-between dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                id="language-btn"
+                            >
+                                <span class="me-2 dropdown-language-name"
+                                    >English</span
+                                >
+                            </button>
+                            <ul class="dropdown-menu mt-2">
+                                <li>
+                                    <a class="dropdown-item text-white"
+                                        >English</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white"
+                                        >Spanish</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white">
+                                        French</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p class="mt-5 fs-5">Social</p>
+                        <div class="container d-flex m-0 p-0 social-icons">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 mt-5 mt-md-0 row row-cols-1 row-cols-md-2 row-cols-lg-4">
+
+                        <div class="my-3">
+                            <div class="accordion" id="footerAccordion1">
+                                <p class="d-none d-md-block">Product</p>
+                                <div
+                                    class="accordion-item bg-transparent border-0"
+                                >
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed bg-transparent text-white p-0 fs-4 footer-title"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#productLinks"
+                                            aria-expanded="false"
+                                            aria-controls="productLinks"
+                                        >
+                                            Product
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="productLinks"
+                                        class="accordion-collapse collapse"
+                                    >
+                                        <ul class="list-unstyled mt-2">
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Download</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Nitro</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Status</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >App Directory</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Mobile Experience</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="d-md-none">
+
+                        <div class="my-3">
+                            <div class="accordion" id="footerAccordion2">
+                                <p class="d-none d-md-block">Company</p>
+                                <div
+                                    class="accordion-item bg-transparent border-0"
+                                >
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed bg-transparent text-white fs-4 p-0 footer-title"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#companyLinks"
+                                            aria-expanded="false"
+                                            aria-controls="companyLinks"
+                                        >
+                                            Company
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="companyLinks"
+                                        class="accordion-collapse collapse"
+                                    >
+                                        <ul class="list-unstyled mt-2">
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >About</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Jobs</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Brand</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Newsroom</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="d-md-none">
+
+                        <div class="my-3">
+                            <div class="accordion" id="footerAccordion3">
+                                <p class="d-none d-md-block">Resources</p>
+                                <div
+                                    class="accordion-item bg-transparent border-0"
+                                >
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed bg-transparent text-white fs-4 p-0 footer-title"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#resourcesLinks"
+                                            aria-expanded="false"
+                                            aria-controls="resourcesLinks"
+                                        >
+                                            Resources
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="resourcesLinks"
+                                        class="accordion-collapse collapse"
+                                    >
+                                        <ul class="list-unstyled mt-2">
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >College</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Support</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Safety</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Blog</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >StreamKit</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Creators</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Community</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Developers</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Gaming</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Quests</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Official 3rd Party Merch</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Feedback</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="d-md-none">
+
+                        <div class="my-3">
+                            <div class="accordion" id="footerAccordion3">
+                                <p class="d-none d-md-block">Policies</p>
+                                <div
+                                    class="accordion-item bg-transparent border-0"
+                                >
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed bg-transparent text-white fs-4 p-0 footer-title"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#policiesLinks"
+                                            aria-expanded="false"
+                                            aria-controls="policiesLinks"
+                                        >
+                                            Policies
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="policiesLinks"
+                                        class="accordion-collapse collapse"
+                                    >
+                                        <ul class="list-unstyled mt-2">
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Terms</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Privacy</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Cookie Settings</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Guidelines</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Acknowledgements</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >License</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="" class="footer-link"
+                                                    >Company Information</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid p-0">
+                <img src="./assets/logo.svg" alt="logo" class="img-fluid w-100">
+            </div>
+        </footer>
+
+    </body>
+    </html>
